@@ -1,0 +1,17 @@
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    shm_size: '2gb'
+    ports:
+      - "8000:8000"
+    environment:
+      - HEADLESS=true
+      # Add other environment variables here or use env_file
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend/browser_profile:/app/browser_profile
+    restart: always

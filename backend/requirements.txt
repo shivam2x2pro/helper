@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+browser-use
+pydantic
+python-dotenv
+langchain-openai
+browser-use @ git+https://github.com/browser-use/browser-use.git
+
