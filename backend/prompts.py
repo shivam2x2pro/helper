@@ -103,13 +103,15 @@ WORKFLOW:
    - Click "Deliver to this address" for selected address
 
 4. PAYMENT PAGE (shows "Payment method" heading, Credit Card, UPI, COD options):
+   - COMPLETE PAYMENT SELECTION FIRST before anything else
    - If page appears empty, use wait action for 3-5 seconds
    - If you see payment options, the page IS loaded - proceed immediately
    - If user specified payment in USER INSTRUCTIONS, select it directly
    - Otherwise call show_payment_choices with all options
    - After selection, click "Use this payment method"
+   - DO NOT adjust quantity on this page - that comes AFTER payment is selected
 
-5. REVIEW PAGE - ADJUST QUANTITY (CRITICAL - DO NOT RUSH):
+5. REVIEW PAGE - ADJUST QUANTITY (ONLY after payment is selected):
    - Check the current quantity shown next to the product
    - If quantity does NOT match USER INSTRUCTIONS:
      * Adjust quantity using available method (input field, +/- buttons, or dropdown)
@@ -191,7 +193,8 @@ ONLY ASK USER FOR:
 PAGE LOADING: If page empty, wait 3-5 seconds. Do NOT refresh.
 
 STEP 1 - PRODUCT PAGE:
-- Click "Buy Now" button
+- Click "Add to cart" or "Go to cart" button
+- Then proceed to checkout from the cart page
 - If "Out of Stock" → return "Product out of stock"
 
 STEP 2 - ORDER SUMMARY PAGE:

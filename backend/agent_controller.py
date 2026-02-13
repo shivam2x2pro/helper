@@ -23,7 +23,7 @@ _pending_inputs: Dict[str, asyncio.Future] = {}
 # Reusable browser instance
 _browser = None
 
-MAX_STEPS = 25   # Hard limit for agent steps
+MAX_STEPS = 30   # Hard limit for agent steps
 
 # Persistent browser profile directory - stores cookies, login sessions, etc.
 BROWSER_PROFILE_DIR = Path(__file__).parent / "browser_profile"
